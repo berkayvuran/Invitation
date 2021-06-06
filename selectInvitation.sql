@@ -26,6 +26,7 @@ join DataSources ds on g.DataSourceId = ds.Id
 join DeliveryMethods dm on g.DeliveryMethodId = dm.Id
 where g.DataSourceId=1 and
 g.IsReady = 1 and
-g.IsGiven = 1
+g.DeliveryMethodId = 2 and
+g.IsGiven = 0
 order by ds.Name, dm.Name, g.Name
 
