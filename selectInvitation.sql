@@ -28,7 +28,6 @@ join DataSources ds on g.DataSourceId = ds.Id
 join DeliveryMethods dm on g.DeliveryMethodId = dm.Id
 left join GiftInfos gi on g.GiftInfoId = gi.Id
 left join GiftDetails gd on gi.GiftDetailId = gd.Id
-where g.DeliveryMethodId=1
 order by ds.Name, dm.Name, g.Name
 
 select ds.Name as 'Kimin Davetlisi', count (ds.Name) as 'Davetli Sayýsý' from Guests g
